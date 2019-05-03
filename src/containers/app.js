@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import SearchBar from '../components/search-bar';
 import VideoList from './video-list';
+import VideoDetail from '../components/video-detail';
 
 const API_END_POINT = 'https://api.themoviedb.org/3/';
 
@@ -23,13 +24,6 @@ class App extends Component {
             
             this.setState({movieList:response.data.results.slice(1,6)});
             this.setState({currentMovie:response.data.results[0]});
-            console.log('-----------------');
-            console.log('',this.state.movieList);
-            console.log('-----------------');
-
-            console.log('-----------------');
-            console.log('',this.state.currentMovie);
-            console.log('-----------------');
         });
     }
 
@@ -38,6 +32,7 @@ class App extends Component {
             <div>
                 <SearchBar/>
                 <VideoList/>
+                <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
             </div>
         );
     }
