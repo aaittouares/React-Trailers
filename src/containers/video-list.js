@@ -3,7 +3,6 @@ import React from 'react';
 import VideoListItem from '../components/video-list-item';
 
 const VideoList = ({movieList}) => {
-    console.log(movieList);
     return (
         <div>
             <ul>
