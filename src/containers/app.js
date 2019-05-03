@@ -4,6 +4,7 @@ import axios from 'axios';
 import SearchBar from '../components/search-bar';
 import VideoList from './video-list';
 import VideoDetail from '../components/video-detail';
+import Video from '../components/video';
 
 const API_END_POINT = 'https://api.themoviedb.org/3/';
 
@@ -56,6 +57,7 @@ class App extends Component {
         return (
             <div>
                 <SearchBar/>
+                <Video videoId={this.state.currentMovie.videoId}/>
                 {renderVideoList()}
                 <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
             </div>
