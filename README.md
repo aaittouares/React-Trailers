@@ -1,8 +1,8 @@
 ### React Trailers ###
 
-Exercice React affichant des Bandes annonces de films
+Exercice React affichant des bandes annonces de films
 
-Pour installer le projet se placer dans le projet et lancer : 
+Pour installer le projet se placer dans le répertoire et lancer : 
 
 ```
 > npm install
